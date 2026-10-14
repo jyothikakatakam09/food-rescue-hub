@@ -21,6 +21,7 @@ app.use("/api", protectedRoutes); // NEW
 app.use("/api/donations", donationRoutes);
 app.use("/api/claims", claimRoutes);
 app.use("/api/needs", needRoutes);
+app.use('/api/organizations', require('./routes/organizations'));
 app.get("/", (req, res) => {
   res.json({ message: "Community Food Rescue backend is running!" });
 });
