@@ -3,8 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 const Organization = require("../models/Organization");
-const { authenticateToken } = require("../middleware/authMiddleware");
-const { authorizeRoles } = require("../middleware/roleMiddleware");
+const authenticateToken = require("../middleware/authMiddleware");
+const authorizeRoles = require("../middleware/roleMiddleware");
 
 // Get all approved organizations
 router.get("/", async (req, res) => {
